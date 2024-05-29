@@ -5,26 +5,25 @@ public class main {
 		Scanner in = new Scanner(System.in);
 		int i;
 		
-		System.out.println("Quantas Publicações Você vai inserir:");
+		System.out.println("Quantas PublicaÃ§Ãµes VocÃª vai inserir:");
 		i = in.nextInt();
 		
 		Publicacao[] publi = new Publicacao[i];
 		for(int add = 0; add < i; add++) {
 			publi[add] = new Publicacao();
 			
-			System.out.println("Qual o nome da "+(add +1)+"° Publicação:");
+			System.out.println("Qual o nome da "+(add +1)+"Â° PublicaÃ§Ã£o:");
 			publi[add].setTitulo(in.nextLine());
 			publi[add].setTitulo(in.nextLine());
 			
-			System.out.println("Qual o Autor da "+(add+1)+"° Publicação:");
+			System.out.println("Qual o Autor da "+(add+1)+"Â° PublicaÃ§Ã£o:");
 			publi[add].setAutor(in.nextLine());
 			
-			System.out.println("Qual o ano da "+(add+1)+"° Publicação:");
+			System.out.println("Qual o ano da "+(add+1)+"Â° PublicaÃ§Ã£o:");
 			publi[add].setAnoPublicacao(in.nextInt());
-		}
-		
+		}
 		for(int apre = 0;apre <i; apre++) {
-			publi[apre].exibirDetalhes(); 
+			System.out.println(publi[apre].exibirDetalhes());
 		}
 		
 		System.out.println("Quantas Revistas deseja Registrar?");
@@ -33,26 +32,26 @@ public class main {
 		Revista[] revista = new Revista[i];
 		for(int add = 0; add < i; add++) {
 			revista[add] = new Revista();
-			System.out.println("Qual o nome da "+(add +1)+"° Revista:");
+			System.out.println("Qual o nome da "+(add +1)+"Â° Revista:");
 			revista[add].setTitulo(in.nextLine());
 			revista[add].setTitulo(in.nextLine());
 			
-			System.out.println("Qual o Autor da "+(add+1)+"° Revista:");
+			System.out.println("Qual o Autor da "+(add+1)+"Â° Revista:");
 			revista[add].setAutor(in.nextLine());
 			
-			System.out.println("Qual o ano da "+(add+1)+"° Revista:");
+			System.out.println("Qual o ano da "+(add+1)+"Â° Revista:");
 			revista[add].setAnoPublicacao(in.nextInt());
 			
-			System.out.println("Qual o  numero da Edição?");
+			System.out.println("Qual o  numero da EdiÃ§Ã£o?");
 			revista[add].setNumEdicao(in.nextInt());
 			
-			System.out.println("Qual o Mês da Publicação");
+			System.out.println("Qual o MÃªs da PublicaÃ§Ã£o");
 			revista[add].setMesPublicacao(in.next());
 		}
 		for(int apre = 0;apre <i; apre++) {
-			System.out.println("Deseja Mostra o Mês de Publição? ");
+			System.out.println("Deseja Mostra o MÃªs de PubliÃ§Ã£o? ");
 			boolean bool = in.nextBoolean();
-			revista[apre].exibirDetalhes(bool); 
+System.out.println(revista[apre].exibirDetalhes(bool));
 		}
 		
 		System.out.println("Quantas Livros deseja Registrar?");
@@ -61,14 +60,14 @@ public class main {
 		Livro[] livro = new Livro[i];
 		for(int add = 0; add < i; add++) {
 			livro[add] = new Livro();
-			System.out.println("Qual o nome da "+(add +1)+"° Livro:");
+			System.out.println("Qual o nome da "+(add +1)+"Â° Livro:");
 			livro[add].setTitulo(in.nextLine());
 			livro[add].setTitulo(in.nextLine());
 			
-			System.out.println("Qual o Autor da "+(add+1)+"° Livro:");
+			System.out.println("Qual o Autor da "+(add+1)+"Â° Livro:");
 			livro[add].setAutor(in.nextLine());
 			
-			System.out.println("Qual o ano da "+(add+1)+"° Livro:");
+			System.out.println("Qual o ano da "+(add+1)+"Â° Livro:");
 			livro[add].setAnoPublicacao(in.nextInt());
 			
 			System.out.println("Qual o  numero da numero de paginas?");
@@ -80,7 +79,7 @@ public class main {
 		for(int apre = 0;apre <i; apre++) {
 			System.out.println("Deseja Mostra o nome da editora? ");
 			boolean bool = in.nextBoolean();
-			livro[apre].exibirDetalhes(bool); 
+			System.out.println(livro[apre].exibirDetalhes(bool));
 		}
 		
 	}
