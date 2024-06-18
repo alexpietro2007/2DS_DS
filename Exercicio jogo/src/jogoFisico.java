@@ -1,5 +1,5 @@
 
-public class jogoFisico {
+public class jogoFisico extends Jogo {
 	private int quantJogadores;
 	private double tempoPartida;
 	
@@ -18,7 +18,12 @@ public class jogoFisico {
 		return this.tempoPartida;
 	}
 
-	double calcularTempoTotal (int quant){
-		return tempoPartida*quant;
+	Double calcularTempoTotal (int quant){
+		return this.tempoPartida*quant;
+	}
+
+	@Override
+	public String exibirInformacoes() {
+		return "nome do jogo: " + super.getNome() + " preço: " + super.getPreco() + " distribuidora: " + super.getDistribuidora() + " quantidade de Jogadores: "+this.quantJogadores+" Tempo de Parida: ";
 	}
 }

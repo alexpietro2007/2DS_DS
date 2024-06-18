@@ -22,4 +22,9 @@ public class jogoEletronico extends Jogo {
 	String quantJogadoresOnline (int quant) {
 		return  "Jogando online com "+quant+" jogadores";
 	}
+
+	@Override
+	public String exibirInformacoes() {
+		return "nome do jogo: " + super.getNome() + " preço: " + super.getPreco() + " distribuidora: " + super.getDistribuidora() + " Platarforma: "+this.plataforma+" Genero: "+ this.genero;
+	}
 }
