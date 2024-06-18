@@ -1,7 +1,5 @@
 
 public class Jogo {
-
-	
   private String nome;
   public double preco;
   private String distribuidora;
@@ -10,33 +8,31 @@ public class Jogo {
 	this.nome = nome;
 	this.preco = preco;
 	this.distribuidora = distribuidora;
-	
-	//getters
-}
+  }
+  //getters
   public String getNome() {
-    	return this.nome;
-}
+    return this.nome;
+  }
   public double getPreco() {
-    	return preco;
-}
+    return preco;
+  }
   public String getDistribuidora() {
-    	return this.distribuidora;
-}
+    return this.distribuidora;
+  }
 
     
-     //setters
-
+  //setters
   public void setNome (String nome) {
-    	this.nome = nome;
-}
+    this.nome = nome;
+  }
   public void setPreco (double preco) {
-    	this.preco = preco;
-}
+    this.preco = preco;
+  }
   public void setDistribuidora (String distribuidora) {
-    	 this.distribuidora = distribuidora;
-}
+    this.distribuidora = distribuidora;
+  }
   public String exibirInformacoes() {
-	  return "nome do jogo:" + nome + "preço:" + preco + "distribuidora:" + distribuidora;
+	  return "nome do jogo:" + nome + "preï¿½o:" + preco + "distribuidora:" + distribuidora;
   }
 
 }
