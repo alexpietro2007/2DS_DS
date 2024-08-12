@@ -10,7 +10,7 @@ public class Filme {
 	void setDuracaoMin(double valor) {
 		this.duracaoMin = valor;
 	}
-	
+	  
 	String getNome() {
 		return this.nome;
 	}
