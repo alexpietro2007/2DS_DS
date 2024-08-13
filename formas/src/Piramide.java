@@ -1,7 +1,7 @@
 public class Piramide extends Triangulo{ 
     @Override
     public void calcular(){
-        super.setResul(((super.getComprimento()*super.getLargura())*super.getAltura())/2);
+        super.setResul(((super.getLargura()*super.getLargura())*super.getAltura())/2);
     };
 
     @Override

@@ -38,6 +38,11 @@ public abstract class Forma {
     };
 
     public void apresentar(){
+        calcular();
         System.out.println(forma());
     }
+
+    protected void finalize(){
+        finalize();
+    };
 }

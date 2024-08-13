@@ -1,11 +1,12 @@
 public class Quadrado extends Forma {
     @Override
     public void calcular(){
-        super.setResul(super.getAltura() * super.getLargura());
+        super.setResul(super.getLargura() * super.getLargura());
     };
 
     @Override
     public String forma(){
-        return "Largura: " + super.getLargura() + " Altura: " + super.getAltura() + "Área: " + super.getResul();
+        return "Largura: " + super.getLargura() + " Altura: " + super.getLargura() + " Área: " + super.getResul();
     };
+
 }

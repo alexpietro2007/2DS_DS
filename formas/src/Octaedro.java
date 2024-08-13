@@ -1,7 +1,7 @@
 public class Octaedro extends Losango{
     @Override
     public void calcular(){
-        super.setResul((((super.getComprimento()*super.getLargura())*super.getAltura())/2)*2);
+        super.setResul((Math.pow(super.getLargura(), 2)*super.getAltura()/2)*2);
     };
 
     @Override

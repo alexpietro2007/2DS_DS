@@ -14,7 +14,7 @@ public class Pentagono extends Forma{
 
     @Override
     public void calcular(){
-        super.setResul(super.getAltura() * Math.pow(getLado(), 5));
+        super.setResul((super.getAltura()/2) * Math.pow(getLado(), 5));
     };
 
     @Override

@@ -6,7 +6,7 @@ public class Cubo extends Quadrado {
 
     @Override
     public String forma(){
-        return "Largura: " + super.getLargura() + " Altura: " + super.getAltura() + "Área: " + super.getResul();
+        return "Largura: " + super.getLargura() + " Altura: " + super.getLargura() + " Comprimento: " + super.getLargura() + " Área: " + super.getResul();
     };
     
 }
