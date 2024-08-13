@@ -21,7 +21,7 @@ public class main {
 
             switch (escolha){
                 case 1:
-                    Quadrado quad = new Quadrado();
+                    Quadrado quad = new Quadrado[0];
 
                     System.out.println("Coloque a Largura:");
                     quad.setLargura(in.nextDouble());
