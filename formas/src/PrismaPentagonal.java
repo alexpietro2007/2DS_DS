@@ -1,7 +1,7 @@
 public class PrismaPentagonal extends Pentagono{
     @Override
     public void calcular(){
-        super.setResul(super.getAltura() * (super.getLado() * 5)*super.getComprimento());
+        super.setResul((super.getAltura()/2)* (super.getLado() * 5)*super.getComprimento());
     };
 
     @Override
