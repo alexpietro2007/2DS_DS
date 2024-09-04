@@ -10,7 +10,7 @@ public class Main {
         System.out.println("Funcionario:");
         System.out.println("Nome: " + f1.getNome());
         System.out.println("CPF: " + f1.getCpf());
-        System.out.println("Salário: " + f1.getSalario());
+        System.out.println("Salï¿½rio: " + f1.getSalario());
         System.out.println("---------------------------");
 
         // Criando e configurando um objeto Gerente
@@ -23,8 +23,8 @@ public class Main {
         System.out.println("Gerente:");
         System.out.println("Nome: " + g1.getNome());
         System.out.println("CPF: " + g1.getCpf());
-        System.out.println("Salário: " + g1.getSalario());
-        System.out.println("Autenticação (senha 2222): " + g1.autentica(2222));
+        System.out.println("Salï¿½rio: " + g1.getSalario());
+        System.out.println("Autenticaï¿½ï¿½o (senha 2222): " + g1.autentica(2222));
         System.out.println("---------------------------");
         
         // Criando e configurando um objeto Coordenador
@@ -36,7 +36,7 @@ public class Main {
         System.out.println("Coordenador:");
         System.out.println("Nome: " + c1.getNome());
         System.out.println("CPF: " + c1.getCpf());
-        System.out.println("Salário: " + c1.getSalario());
+        System.out.println("Salï¿½rio: " + c1.getSalario());
         System.out.println("---------------------------");
         
         // Criando e usando o ControleBonificacao
@@ -45,7 +45,7 @@ public class Main {
         control.registra(g1);
         control.registra(c1);
         
-        System.out.println("Gastos com bonificação:");
+        System.out.println("Gastos com bonificaï¿½ï¿½o:");
         System.out.println("Total: " + control.getSoma());
     }
 }
