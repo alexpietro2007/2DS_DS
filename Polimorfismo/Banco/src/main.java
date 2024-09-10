@@ -27,13 +27,13 @@ public class main {
         cc1.setTarifaMensal(in.nextDouble());
 
         ContaPoupanca cp1 = new ContaPoupanca();
-        System.out.println("Qual o nome da Conta Corrente?");
+        System.out.println("Qual o nome da Conta Poupança?");
         cp1.setName(in.next());
-        System.out.println("Qual o cpf da Conta Corrente?");
+        System.out.println("Qual o cpf da Conta Poupança?");
         cp1.setCpf(in.nextInt());
-        System.out.println("Qual o Numero da Conta Corrente?");
+        System.out.println("Qual o Numero da Conta Poupança?");
         cp1.setNumeroConta(in.nextInt());
-        System.out.println("Qual o saldo da Conta Corrente?");
+        System.out.println("Qual o saldo da Conta Poupança?");
         cp1.setSaldo(in.nextDouble());
 
         System.out.println("----------------------------------");
