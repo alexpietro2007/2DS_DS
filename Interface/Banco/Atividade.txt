@@ -1,0 +1,25 @@
+Instruções
+Crie um algoritmo que permita a gestão de diferentes tipos de contas, como conta corrente e conta poupança.
+O sistema deve permitir que os clientes realizem operações básicas de depósito e saque, além de funcionalidades específicas para cada tipo de conta.
+
+Para iniciar o desenvolvimento, o sistema deverá seguir os seguintes requisitos:
+
+    Operações básicas da conta: Todas as contas, independente do tipo, precisam permitir que o cliente:
+
+        >Deposite um valor: Quando o cliente fizer um depósito, o valor deverá ser adicionado ao saldo da conta.
+        >Retire um valor (saque): Quando o cliente solicitar um saque, o valor deverá ser subtraído do saldo da conta.
+        >Verifique o saldo: O cliente deve poder consultar o saldo atual da conta.
+
+    Conta Bancária Genérica: Todas as contas do banco compartilham algumas características. Portanto, o sistema deve ter um tipo de conta genérica que:
+
+        >Possua um saldo inicial, que será passado quando a conta for criada.
+        >Tenha uma forma de retornar o saldo da conta para o cliente.
+
+    Conta Corrente: Para clientes que possuam conta corrente, o sistema deve oferecer uma funcionalidade adicional:
+
+        >Além do saldo normal, o cliente terá um limite de cheque especial. Isso significa que o cliente poderá sacar valores maiores do que seu saldo, desde que não ultrapasse o limite do cheque especial.
+        >O sistema deve permitir que o cliente saque um valor mesmo que o saldo fique negativo, até o limite do cheque especial.
+
+    Conta Poupança: Para clientes que possuam conta poupança, o sistema deve ter uma funcionalidade especial:
+    
+        >Ao final de cada mês, o cliente poderá aplicar uma taxa de rendimento mensal sobre o saldo da conta, aumentando o valor de acordo com a taxa informada.
