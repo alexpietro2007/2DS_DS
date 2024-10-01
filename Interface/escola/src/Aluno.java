@@ -46,6 +46,8 @@ public class Aluno implements Pessoa {
         this.telefone = telefone;
     }
 
-
+    public String toString(){
+        return "nome: " + this.nome + "\n Endereço: "+ this.endereco + "\n Telefone: "+ this.telefone+ "\n Matricula: "+ this.matricula;
+    }
 
 }
