@@ -1,27 +1,56 @@
+import java.text.DecimalFormat;
+
 public class ContaCorrente extends ContaGenerica {
     private double chequeEspecial;
+    DecimalFormat dinheiro = new DecimalFormat("R$ #,##0.00");
 
-    //getters
-    public double getChequeEspecial(){
+    // Construtor
+    public ContaCorrente(double saldoInicial, double chequeEspecial) {
+        super(saldoInicial);
+        this.chequeEspecial = chequeEspecial;
+    }
+
+    // Getters e Setters
+    public double getChequeEspecial() {
         return this.chequeEspecial;
     }
 
-    //setter
-    public void setChequeEspecial(double cH){
-        this.chequeEspecial = ch;
+    public void setChequeEspecial(double chequeEspecial) {
+        this.chequeEspecial = chequeEspecial;
     }
 
-    //SobreEscrita
+    // Implementação dos métodos da interface
     @Override
-    public String sacar(double sV){
-        if (super.getSaldo() - sV > 0){
-            super.setSaldo(super.getSaldo - sV);
-            return "Valor Restante do Saldo Atual: " +super.getSaldo();
-        }else if (this.chequeEspecial - sV < 0){
-            chequeEspecial -= sV;
-            return "valor Restante do Cheque Especial: " + chequeEspecial;
-        }else{
-            return "Não Foi Possivel Sacar o Valor Desejado Pois já foi utilizado todo seu saldo especial";
+    public String depositar(double valor) {
+        super.setSaldo(super.getSaldo() + valor);
+        return "Depósito efetuado. Seu saldo agora é de: " + dinheiro.format(this.getSaldo());
+    }
+
+    @Override
+    public String sacar(double valor) {
+        double saldoAtual = super.getSaldo();
+
+        if (valor <= saldoAtual) {
+            super.setSaldo(saldoAtual - valor);
+            return "Saque efetuado. Seu saldo agora é de: " + dinheiro.format(this.getSaldo());
         }
+
+        double valorRestante = valor - saldoAtual;
+        if (valorRestante <= this.chequeEspecial) {
+            super.setSaldo(0);
+            this.chequeEspecial -= valorRestante;
+            return "Saque efetuado utilizando cheque especial. Saldo atual: "
+                    + dinheiro.format(super.getSaldo()) + ", Cheque especial restante: "
+                    + dinheiro.format(this.chequeEspecial);
+        }
+
+        return "Saldo insuficiente, mesmo com o cheque especial.";
+    }
+
+    @Override
+    public String verificarSaldo() {
+        return "Seu saldo atual é: " + dinheiro.format(super.getSaldo())
+                + " e o saldo do cheque especial é: " + dinheiro.format(this.chequeEspecial);
     }
 }
+
