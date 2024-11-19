@@ -1,11 +1,23 @@
 package interfaceGrafica;
+import java.awt.List;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 public class SQLjava {
+	// gerencia a conexão com o banco de dados 
+	private Connection connection = null;
+	// gerencia as consultas com o banco de dados
+	private Statement statement = null;
+	// armazena as irfomações vindo de um select.
+	private ResultSet resultset = null;
 	public void conectar() {
 		// 1º Java data base connection
 		// 2 º servidor
 		// 3 º nome da tabela
-		String servidor = "jdbc:mysql://localhost:3306/JAVA";
+		String servidor = "jdbc:mysql://localhost:3306/friends";
 		// login do banco de dados
 		String usuario ="root";
 		String senha = "";

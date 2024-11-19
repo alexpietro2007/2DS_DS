@@ -86,7 +86,15 @@ public class Cadastrar extends JFrame {
 		contentPane.add(lblNewLabel_1_1_1);
 		
 		JButton btnNewButton = new JButton("Cadastrar");
-		btnNewButton.setBounds(312, 224, 89, 23);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SQLjava cn = new SQLjava();
+				cn.conectar();
+				
+				System.out.println("a");
+			}
+		});
+		btnNewButton.setBounds(192, 224, 209, 135);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Voltar");
